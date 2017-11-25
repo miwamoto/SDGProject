@@ -11,7 +11,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='sdg_vertical' name='excel-direct.08tk45x0kmkiia10510e60gr2od6'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/global_view/sdg_vertical.xlsx' interpretationMode='0' password='' server='' validate='no' />
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Data/global_view/sdg_vertical.xlsx' interpretationMode='0' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
         <relation connection='excel-direct.08tk45x0kmkiia10510e60gr2od6' name='Sheet1' table='[Sheet1$]' type='table'>
@@ -163,24 +163,24 @@
         </groupfilter>
       </group>
       <mapped-images>
-        <mapped-image caption='SDG C2' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/midterm/screenshots/sdg-icon-column2.png' name='[MappedImage1]'>
+        <mapped-image caption='SDG C2' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/sdg-icon-column2.png' name='[MappedImage1]'>
           <mapping bottom='0.0' left='0' right='10' top='9.0' x='[Calculation_450360031237910531]' y='[Calculation_450360031237955588]' />
           <image-options show-entire-image='true' />
         </mapped-image>
-        <mapped-image caption='SDG C1' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/midterm/screenshots/sdg-icon-column1c.png' name='[MappedImage2]'>
+        <mapped-image caption='SDG C1' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/sdg-icon-column1c.png' name='[MappedImage2]'>
           <mapping bottom='0.0' left='0' right='10' top='9.0' x='[Calculation_450360031237910531]' y='[Calculation_450360031237955588]' />
           <image-options show-entire-image='true' />
         </mapped-image>
-        <mapped-image caption='Global_icon' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/final project/global_icon.png' name='[MappedImage3]'>
+        <mapped-image caption='Global_icon' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/global_icon.png' name='[MappedImage3]'>
           <mapping bottom='0' left='0' right='10' top='10' x='[Calculation_450360031237910531]' y='[Calculation_450360031237910531]' />
           <image-options show-entire-image='true' />
         </mapped-image>
-        <mapped-image caption='SDG left bar' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/final project/sdg-left-bar.png' name='[MappedImage4]'>
+        <mapped-image caption='SDG left bar' expression='file:///C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/sdg-left-bar.png' name='[MappedImage4]'>
           <mapping bottom='0.0' left='0' right='10' top='8.0' x='[Calculation_450360031237910531]' y='[Calculation_450360031237955588]' />
           <image-options show-entire-image='true' />
         </mapped-image>
       </mapped-images>
-      <layout dim-ordering='alphabetic' dim-percentage='0.551643' measure-ordering='alphabetic' measure-percentage='0.448357' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.538194' measure-ordering='alphabetic' measure-percentage='0.461806' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='shape' field='[none:SDG:ok]' palette='w209' type='shape'>
@@ -324,7 +324,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='sdgi2017-sdg only' name='excel-direct.158ivv31r3xsqs14q3kjp0b2t0di'>
-            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/global_view/sdgi2017-sdg only.xlsx' interpretationMode='1' password='' server='' validate='no' />
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Data/global_view/sdgi2017-sdg only.xlsx' interpretationMode='1' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
         <relation connection='excel-direct.158ivv31r3xsqs14q3kjp0b2t0di' name='SDG INDEX 2017 DATA' table='[&apos;SDG INDEX 2017 DATA$&apos;]' type='table'>
@@ -731,92 +731,7 @@
     <mapsource name='Tableau' />
   </mapsources>
   <actions>
-    <action caption='Global Icon' name='[Action10]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='C_Dashboard Country' type='sheet' worksheet='Menu_global_icon' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='Menu_Country_icon,G_expand_icon,G_Heatmap,G_List SDGs,G_Map Global,G_SDG Box Filered,Menu_GLeftBar,Menu_RightBar' />
-        <param name='special-fields' value='all' />
-        <param name='target' value='G_Dashboard' />
-      </command>
-    </action>
-    <action caption='Country Action' name='[Action11]'>
-      <activation type='on-select' />
-      <source dashboard='G_Dashboard' type='sheet' worksheet='Menu_Country_icon' />
-      <link caption='Country Action' delimiter=',' escape='\' expression='tsl:C_Dashboard%20Country?%5Bfederated.119lpi60pu65j112fmnrm1m9w52w%5D.%5BCountry%5D~s0=&lt;[Country]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
-        <param name='target' value='C_Dashboard Country' />
-      </command>
-    </action>
-    <action caption='Country icon' name='[Action12]'>
-      <activation type='on-select' />
-      <source dashboard='S_Dashboard SDG' type='sheet' worksheet='Menu_Country_icon' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
-        <param name='special-fields' value='all' />
-        <param name='target' value='C_Dashboard Country' />
-      </command>
-    </action>
-    <action caption='SDG icons' name='[Action13]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='G_Dash Heatmap' type='sheet'>
-        <exclude-sheet name='G_Heatmap' />
-        <exclude-sheet name='Menu_Country_icon' />
-        <exclude-sheet name='Menu_global_icon' />
-      </source>
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='Menu_Country_icon,Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
-        <param name='special-fields' value='all' />
-        <param name='target' value='S_Dashboard SDG' />
-      </command>
-    </action>
-    <action caption='Country Icon' name='[Action14]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='G_Dash Heatmap' type='sheet' worksheet='Menu_Country_icon' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
-        <param name='special-fields' value='all' />
-        <param name='target' value='C_Dashboard Country' />
-      </command>
-    </action>
-    <action caption='Highlight 1 (generated)' name='[Action1]'>
-      <activation auto-clear='true' type='on-select' />
-      <source type='sheet' worksheet='G_List SDGs' />
-      <command command='tsc:brush'>
-        <param name='field-captions' value='SDG' />
-        <param name='target' value='G_List SDGs' />
-      </command>
-    </action>
-    <action caption='Expand heatmap' name='[Action2]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='G_Dashboard' type='sheet' worksheet='G_expand_icon' />
-      <link caption='Expand heatmap' delimiter=',' escape='\' expression='tsl:G_Dash%20Heatmap?' include-null='true' multi-select='true' url-escape='true' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='G_Heatmap,Menu_RightBar' />
-        <param name='single-select' value='' />
-        <param name='target' value='G_Dash Heatmap' />
-      </command>
-    </action>
-    <action caption='Global Icon' name='[Action3]'>
-      <activation auto-clear='true' type='on-select' />
-      <source dashboard='G_Dash Heatmap' type='sheet' worksheet='Menu_global_icon' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='G_expand_icon,G_Heatmap,G_List SDGs,G_Map Global,G_SDG Box Filered,Menu_Country_icon,Menu_GLeftBar,Menu_RightBar' />
-        <param name='special-fields' value='all' />
-        <param name='target' value='G_Dashboard' />
-      </command>
-    </action>
-    <action caption='SDG ftom list boxes' name='[Action4]'>
-      <activation type='on-hover' />
-      <source dashboard='G_Dashboard' type='sheet' worksheet='G_List SDGs' />
-      <link caption='SDG ftom list boxes' delimiter=',' escape='\' expression='tsl:G_Dashboard?%5Bfederated.119lpi60pu65j112fmnrm1m9w52w%5D.%5BSDG%5D~s0=&lt;[SDG]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
-      <command command='tsc:tsl-filter'>
-        <param name='exclude' value='Menu_Country_icon,G_expand_icon,G_Heatmap,G_List SDGs,G_Map Global,Menu_GLeftBar,Menu_RightBar' />
-        <param name='target' value='G_Dashboard' />
-      </command>
-    </action>
-    <action caption='SDG Icons' name='[Action5]'>
+    <action caption='SDG Icons' name='[Action10]'>
       <activation type='on-select' />
       <source dashboard='G_Dashboard' type='sheet'>
         <exclude-sheet name='Menu_Country_icon' />
@@ -832,7 +747,7 @@
         <param name='target' value='S_Dashboard SDG' />
       </command>
     </action>
-    <action caption='global icon' name='[Action6]'>
+    <action caption='global icon' name='[Action11]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='S_Dashboard SDG' type='sheet' worksheet='Menu_global_icon' />
       <command command='tsc:tsl-filter'>
@@ -841,7 +756,7 @@
         <param name='target' value='G_Dashboard' />
       </command>
     </action>
-    <action caption='SDG icons' name='[Action7]'>
+    <action caption='SDG icons' name='[Action12]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='S_Dashboard SDG' type='sheet'>
         <exclude-sheet name='Menu_Country_icon' />
@@ -854,7 +769,7 @@
         <param name='target' value='S_Dashboard SDG' />
       </command>
     </action>
-    <action caption='SDG Hover' name='[Action8]'>
+    <action caption='SDG Hover' name='[Action13]'>
       <activation type='on-hover' />
       <source dashboard='G_Dashboard' type='sheet'>
         <exclude-sheet name='Menu_Country_icon' />
@@ -870,7 +785,7 @@
         <param name='target' value='G_Dashboard' />
       </command>
     </action>
-    <action caption='SDG icons' name='[Action9]'>
+    <action caption='SDG icons' name='[Action14]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='C_Dashboard Country' type='sheet'>
         <exclude-sheet name='C_Country_Mockup' />
@@ -880,6 +795,91 @@
       <command command='tsc:tsl-filter'>
         <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
         <param name='target' value='S_Dashboard SDG' />
+      </command>
+    </action>
+    <action caption='Global Icon' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='C_Dashboard Country' type='sheet' worksheet='Menu_global_icon' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Menu_Country_icon,G_expand_icon,G_Heatmap,G_List SDGs,G_Map Global,G_SDG Box Filered,Menu_GLeftBar,Menu_RightBar' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='G_Dashboard' />
+      </command>
+    </action>
+    <action caption='Expand heatmap' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='G_Dashboard' type='sheet' worksheet='G_expand_icon' />
+      <link caption='Expand heatmap' delimiter=',' escape='\' expression='tsl:G_Dash%20Heatmap?' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='G_Heatmap,Menu_RightBar' />
+        <param name='single-select' value='' />
+        <param name='target' value='G_Dash Heatmap' />
+      </command>
+    </action>
+    <action caption='Country Action' name='[Action3]'>
+      <activation type='on-select' />
+      <source dashboard='G_Dashboard' type='sheet' worksheet='Menu_Country_icon' />
+      <link caption='Country Action' delimiter=',' escape='\' expression='tsl:C_Dashboard%20Country?%5Bfederated.119lpi60pu65j112fmnrm1m9w52w%5D.%5BCountry%5D~s0=&lt;[Country]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
+        <param name='target' value='C_Dashboard Country' />
+      </command>
+    </action>
+    <action caption='Country icon' name='[Action4]'>
+      <activation type='on-select' />
+      <source dashboard='S_Dashboard SDG' type='sheet' worksheet='Menu_Country_icon' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='C_Dashboard Country' />
+      </command>
+    </action>
+    <action caption='Global Icon' name='[Action5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='G_Dash Heatmap' type='sheet' worksheet='Menu_global_icon' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='G_expand_icon,G_Heatmap,G_List SDGs,G_Map Global,G_SDG Box Filered,Menu_Country_icon,Menu_GLeftBar,Menu_RightBar' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='G_Dashboard' />
+      </command>
+    </action>
+    <action caption='Country Icon' name='[Action6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='G_Dash Heatmap' type='sheet' worksheet='Menu_Country_icon' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='C_Dashboard Country' />
+      </command>
+    </action>
+    <action caption='SDG icons' name='[Action7]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='G_Dash Heatmap' type='sheet'>
+        <exclude-sheet name='G_Heatmap' />
+        <exclude-sheet name='Menu_Country_icon' />
+        <exclude-sheet name='Menu_global_icon' />
+      </source>
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Menu_Country_icon,Menu_global_icon,Menu_LeftBar,Menu_RightBar' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='S_Dashboard SDG' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='G_List SDGs' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='SDG' />
+        <param name='target' value='G_List SDGs' />
+      </command>
+    </action>
+    <action caption='SDG ftom list boxes' name='[Action9]'>
+      <activation type='on-hover' />
+      <source dashboard='G_Dashboard' type='sheet' worksheet='G_List SDGs' />
+      <link caption='SDG ftom list boxes' delimiter=',' escape='\' expression='tsl:G_Dashboard?%5Bfederated.119lpi60pu65j112fmnrm1m9w52w%5D.%5BSDG%5D~s0=&lt;[SDG]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Menu_Country_icon,G_expand_icon,G_Heatmap,G_List SDGs,G_Map Global,Menu_GLeftBar,Menu_RightBar' />
+        <param name='target' value='G_Dashboard' />
       </command>
     </action>
     <datasources>
@@ -1854,8 +1854,8 @@
           </filter>
           <filter class='categorical' column='[federated.119lpi60pu65j112fmnrm1m9w52w].[Action (SDG_Name,SDG)]'>
             <groupfilter function='crossjoin' user:ui-action-filter='[Action8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[Calculation_450360031268290565]' member='&quot;Sustainable Communities&quot;' />
-              <groupfilter function='member' level='[SDG]' member='11' />
+              <groupfilter function='member' level='[Calculation_450360031268290565]' member='&quot;Good Health&quot;' />
+              <groupfilter function='member' level='[SDG]' member='3' />
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.119lpi60pu65j112fmnrm1m9w52w].[none:Country:nk]' filter-group='3'>
@@ -2677,6 +2677,25 @@
         <cols>[federated.119lpi60pu65j112fmnrm1m9w52w].[none:SDG:ok]</cols>
       </table>
     </worksheet>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
   </worksheets>
   <dashboards>
     <dashboard name='C_Dashboard Country'>
@@ -2864,7 +2883,7 @@
             <format attr='margin' value='4' />
           </zone-style>
         </zone>
-        <zone h='10500' id='35' is-centered='0' is-scaled='1' param='C:/Users/bsc-default/Documents/berkeley DS/w209/project/final project/legend4.png' type='bitmap' w='37300' x='48100' y='9250'>
+        <zone h='10500' id='35' is-centered='0' is-scaled='1' param='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/legend4.png' type='bitmap' w='37300' x='48100' y='9250'>
           <zone-style>
             <format attr='border-color' value='#000000' />
             <format attr='border-style' value='none' />
@@ -3118,7 +3137,7 @@
             <format attr='background-color' value='#ffffff' />
           </zone-style>
         </zone>
-        <zone h='22750' id='133' is-centered='0' is-scaled='1' param='C:/Users/bsc-default/Documents/berkeley DS/w209/project/final project/legendc1.png' type='bitmap' w='8600' x='20300' y='45375'>
+        <zone h='22750' id='133' is-centered='0' is-scaled='1' param='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/legendc1.png' type='bitmap' w='8600' x='20300' y='45375'>
           <zone-style>
             <format attr='border-color' value='#000000' />
             <format attr='border-style' value='none' />
@@ -3135,7 +3154,7 @@
             <format attr='background-color' value='#ffffff' />
           </zone-style>
         </zone>
-        <zone h='22750' id='134' is-centered='0' is-scaled='1' param='C:/Users/bsc-default/Documents/berkeley DS/w209/project/final project/legendc2.png' type='bitmap' w='8000' x='56200' y='45375'>
+        <zone h='22750' id='134' is-centered='0' is-scaled='1' param='C:/Users/bsc-default/Documents/berkeley DS/w209/project/github/SDGProject/consolidated_workbook/W209_SDG.twb Files/Image/legendc2.png' type='bitmap' w='8000' x='56200' y='45375'>
           <zone-style>
             <format attr='border-color' value='#000000' />
             <format attr='border-style' value='none' />
@@ -3564,7 +3583,7 @@
           <map-navigation value='1' />
         </viewpoint>
       </viewpoints>
-      <active id='42' />
+      <active id='-1' />
     </window>
     <window class='worksheet' name='G_Map Global'>
       <cards>
@@ -3607,10 +3626,10 @@
       <cards>
         <edge name='left'>
           <strip size='160'>
-            <card size='1' type='pages' />
-            <card size='4' type='filters' />
-            <card size='17' type='marks' />
-            <card size='31' type='measures' />
+            <card type='pages' />
+            <card size='3' type='filters' />
+            <card size='13' type='marks' />
+            <card size='24' type='measures' />
           </strip>
         </edge>
         <edge name='top'>
@@ -3929,7 +3948,7 @@
           <map-navigation value='1' />
         </viewpoint>
       </viewpoints>
-      <active id='35' />
+      <active id='-1' />
     </window>
     <window class='dashboard' name='C_Dashboard Country'>
       <viewpoints>
@@ -3980,7 +3999,7 @@
           <map-navigation value='1' />
         </viewpoint>
       </viewpoints>
-      <active id='1' />
+      <active id='-1' />
     </window>
     <window class='worksheet' name='C_Country_Mockup'>
       <cards>
@@ -4017,6 +4036,28 @@
           </color-one-way>
         </highlight>
       </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
     </window>
   </windows>
   <thumbnails>
@@ -8040,6 +8081,20 @@
       x+8OrbXy9H338n55Fw5VEDHcLLzuW5wzJZdP+hLQO6p4eW0t586bhdN2oLfWUf0RH+yJcubc
       GTgUiT3r3qBencicSXm9+nSWAHqTzA/wW7Su3gvjk/kBrsIz7PDWcKghSZL0/+cv7gI7tI5A
       AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
   <external>
